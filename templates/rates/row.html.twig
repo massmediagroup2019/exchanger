@@ -1,0 +1,19 @@
+<div class="col-md-1">{{ rate.currency }}</div>
+<div class="col-md-2 rate-field">
+    <div class="edit-rate">
+        <button class="btn btn-warning">Edit</button>
+        {{ rate.rate | localizedcurrency(defaultCurrency)}}
+    </div>
+
+    <div class="save-rate">
+        <button class="btn btn-primary">Save</button>
+        <input class="form-control d-inline rate-input" type="number" step="0.01" min="0" value="{{ rate.rate }}">
+    </div>
+
+
+</div>
+<div class="col-md-4">{{ rate.updatedAt | date }}</div>
+<div class="col-md-4">{{ rate.changedAt | date }}</div>
+<div class="col-md-1">
+    <button class="btn btn-danger delete-rate">Delete</button>
+</div>

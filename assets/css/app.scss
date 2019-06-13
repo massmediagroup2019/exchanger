@@ -1,0 +1,15 @@
+.rate-row {
+  .rate-field {
+    &:not(.editing) .save-rate {
+      display: none;
+    }
+
+    &.editing .edit-rate {
+      display: none;
+    }
+
+    input {
+      width: calc(100% - 70px);
+    }
+  }
+}
